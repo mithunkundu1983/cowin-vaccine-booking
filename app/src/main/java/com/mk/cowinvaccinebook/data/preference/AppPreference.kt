@@ -94,6 +94,10 @@ class AppPreference @Inject constructor(
     }
 
     fun saveBeneficiaryDetails(beneficiaries: List<BeneficiarySummary>) {
+        for(benificiery in beneficiaries){
+            if(benificiery.vaccinationStatus.equals("Vaccinated", true))
+                benificiery.isChecked = false;
+        }
         val beneficiaryDetails = moshi.adapter<List<BeneficiarySummary>>(
             Types.newParameterizedType(
                 MutableList::class.java,
