@@ -5,10 +5,10 @@
     <data>
         <variable
             name="center"
-            type="dev.romio.cowinvaccinebook.data.model.Center" />
+            type="com.mk.cowinvaccinebook.data.model.Center" />
         <variable
             name="session"
-            type="dev.romio.cowinvaccinebook.data.model.Session" />
+            type="com.mk.cowinvaccinebook.data.model.Session" />
     </data>
 
     <ScrollView
@@ -16,7 +16,7 @@
         android:layout_height="match_parent">
         <androidx.constraintlayout.widget.ConstraintLayout
             android:id="@+id/cl_schedule_appointment"
-            android:padding="@dimen/padding_default"
+            android:padding="@dimen/padding_small"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -33,6 +33,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
+                android:visibility="gone"
                 android:text="@string/booking_at"
                 app:layout_constraintTop_toBottomOf="@id/tv_total_centers"
                 app:layout_constraintStart_toStartOf="parent"/>
@@ -42,6 +43,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/center_id"
+                android:visibility="gone"
                 android:textStyle="bold"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/tv_booking_at"/>
@@ -50,6 +52,7 @@
                 android:id="@+id/center_id_val"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:visibility="invisible"
                 android:text="@{Integer.toString(center.centerId)}"
                 android:layout_marginStart="@dimen/margin_small"
                 app:layout_constraintTop_toTopOf="@id/center_id"
@@ -96,7 +99,6 @@
                 android:layout_height="wrap_content"
                 android:text="@string/session"
                 android:textStyle="bold"
-                android:layout_marginTop="@dimen/margin_small"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@id/center_address"/>
 
@@ -104,7 +106,6 @@
                 android:id="@+id/tv_curr_session"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="@dimen/margin_small"
                 app:layout_constraintStart_toEndOf="@id/tv_session"
                 app:layout_constraintTop_toTopOf="@id/tv_session"/>
 
@@ -140,7 +141,7 @@
                 android:id="@+id/tv_available_capacity_val"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="@{Integer.toString(session.availableCapacity)}"
+                android:text="@{Integer.toString(session.availableCapacity_d2)}"
                 tools:text="100"
                 app:layout_constraintTop_toTopOf="@id/tv_available_capacity"
                 app:layout_constraintStart_toEndOf="@id/tv_available_capacity"/>

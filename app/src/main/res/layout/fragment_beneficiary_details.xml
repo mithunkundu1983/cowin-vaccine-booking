@@ -80,7 +80,6 @@
                                 android:id="@+id/rb_no_vaccine_preference"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
-                                android:checked="true"
                                 android:text="@string/no_preference"/>
 
                             <RadioButton
@@ -93,6 +92,7 @@
                                 android:id="@+id/rb_covishield"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:checked="true"
                                 android:text="@string/covishield"/>
 
                         </RadioGroup>
@@ -127,13 +127,13 @@
 
                             <RadioButton
                                 android:id="@+id/rb_pin"
-                                android:checked="true"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="@string/pin"/>
 
                             <RadioButton
                                 android:id="@+id/rb_district"
+                                android:checked="true"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:text="@string/state_and_district"/>
@@ -148,7 +148,7 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="vertical"
-                                android:visibility="gone">
+                                android:visibility="visible">
 
                                 <androidx.appcompat.widget.AppCompatTextView
                                     android:layout_width="match_parent"
@@ -164,12 +164,12 @@
                                         android:layout_height="wrap_content" />
                                     <androidx.appcompat.widget.AppCompatSpinner
                                         android:id="@+id/acs_states"
-                                        android:visibility="invisible"
+                                        android:visibility="visible"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content" />
                                     <androidx.appcompat.widget.AppCompatTextView
                                         android:id="@+id/tv_state_name"
-                                        android:visibility="invisible"
+                                        android:visibility="visible"
                                         android:layout_width="wrap_content"
                                         android:layout_height="wrap_content" />
                                 </FrameLayout>
@@ -195,7 +195,7 @@
                                     <androidx.appcompat.widget.AppCompatTextView
                                         android:id="@+id/tv_district_name"
                                         android:layout_width="wrap_content"
-                                        android:visibility="invisible"
+                                        android:visibility="visible"
                                         android:layout_height="wrap_content" />
                                 </FrameLayout>
 
@@ -208,6 +208,7 @@
                                 android:maxLines="1"
                                 android:maxLength="6"
                                 android:inputType="number"
+                                android:visibility="invisible"
                                 android:layout_marginStart="@dimen/margin_default"
                                 android:layout_marginEnd="@dimen/margin_default"
                                 android:paddingStart="@dimen/padding_default"
@@ -292,7 +293,7 @@
                             android:id="@+id/et_polling_frequency"
                             android:layout_width="@dimen/size_100"
                             android:layout_height="@dimen/size_44"
-                            android:text="6"
+                            android:text="3"
                             android:maxLength="2"
                             android:maxLines="1"
                             android:layout_marginTop="@dimen/margin_default"

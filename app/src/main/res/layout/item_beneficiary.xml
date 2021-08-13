@@ -5,7 +5,7 @@
         <import type="android.view.View"/>
         <variable
             name="viewmodel"
-            type="dev.romio.cowinvaccinebook.data.model.BeneficiarySummary" />
+            type="com.mk.cowinvaccinebook.data.model.BeneficiarySummary" />
     </data>
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
